@@ -1,0 +1,319 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2021-06-15 14:08+0400\n"
+"PO-Revision-Date: 2021-06-15 14:12+0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: ../../../templates\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: Admin/Articles/add.php:10 Admin/Articles/edit.php:10
+#: Admin/Articles/index.php:21 Admin/Articles/view.php:10
+#: Admin/Articles/view.php:66 Admin/ArticlesTags/add.php:10
+#: Admin/ArticlesTags/edit.php:10 Admin/ArticlesTags/index.php:16
+#: Admin/ArticlesTags/view.php:10 Admin/Tags/add.php:10 Admin/Tags/edit.php:10
+#: Admin/Tags/index.php:18 Admin/Tags/view.php:10 Admin/Tags/view.php:52
+#: Admin/Users/add.php:10 Admin/Users/edit.php:10 Admin/Users/index.php:19
+#: Admin/Users/view.php:10 Admin/Users/view.php:56 Articles/add.php:10
+#: Articles/edit.php:10 Articles/index.php:21 Articles/view.php:10
+#: Articles/view.php:66 ArticlesTags/add.php:10 ArticlesTags/edit.php:10
+#: ArticlesTags/index.php:16 ArticlesTags/view.php:10 Tags/add.php:10
+#: Tags/edit.php:10 Tags/index.php:18 Tags/view.php:10 Tags/view.php:52
+#: Users/add.php:10 Users/edit.php:10 Users/index.php:19 Users/view.php:10
+#: Users/view.php:56
+msgid "Actions"
+msgstr "اجراءات"
+
+#: Admin/Articles/add.php:11 Admin/Articles/edit.php:16
+#: Admin/Articles/view.php:13 Articles/add.php:11 Articles/edit.php:16
+#: Articles/view.php:13
+msgid "List Articles"
+msgstr "قائمة جهات الاتصال"
+
+#: Admin/Articles/add.php:18 Articles/add.php:18
+msgid "Add Article"
+msgstr "اضافة لعربة التسوق"
+
+#: Admin/Articles/add.php:28 Admin/Articles/edit.php:33
+#: Admin/ArticlesTags/add.php:22 Admin/ArticlesTags/edit.php:27
+#: Admin/Tags/add.php:24 Admin/Tags/edit.php:29 Admin/Users/add.php:24
+#: Admin/Users/edit.php:29 Articles/add.php:28 Articles/edit.php:33
+#: ArticlesTags/add.php:22 ArticlesTags/edit.php:27 Tags/add.php:24
+#: Tags/edit.php:29 Users/add.php:24 Users/edit.php:29
+msgid "Submit"
+msgstr "تقديم"
+
+#: Admin/Articles/edit.php:12 Admin/Articles/index.php:37
+#: Admin/Articles/view.php:77 Admin/ArticlesTags/edit.php:12
+#: Admin/ArticlesTags/index.php:27 Admin/Tags/edit.php:12
+#: Admin/Tags/index.php:31 Admin/Tags/view.php:67 Admin/Users/edit.php:12
+#: Admin/Users/index.php:33 Admin/Users/view.php:71 Articles/edit.php:12
+#: Articles/index.php:37 Articles/view.php:77 ArticlesTags/edit.php:12
+#: ArticlesTags/index.php:27 Tags/edit.php:12 Tags/index.php:31
+#: Tags/view.php:67 Users/edit.php:12 Users/index.php:33 Users/view.php:71
+msgid "Delete"
+msgstr "حذف"
+
+#: Admin/Articles/edit.php:14 Admin/Articles/index.php:37
+#: Admin/Articles/view.php:12 Admin/Articles/view.php:77
+#: Admin/ArticlesTags/edit.php:14 Admin/ArticlesTags/index.php:27
+#: Admin/ArticlesTags/view.php:12 Admin/Tags/edit.php:14
+#: Admin/Tags/index.php:31 Admin/Tags/view.php:12 Admin/Tags/view.php:67
+#: Admin/Users/edit.php:14 Admin/Users/index.php:33 Admin/Users/view.php:12
+#: Admin/Users/view.php:71 Articles/edit.php:14 Articles/index.php:37
+#: Articles/view.php:12 Articles/view.php:77 ArticlesTags/edit.php:14
+#: ArticlesTags/index.php:27 ArticlesTags/view.php:12 Tags/edit.php:14
+#: Tags/index.php:31 Tags/view.php:12 Tags/view.php:67 Users/edit.php:14
+#: Users/index.php:33 Users/view.php:12 Users/view.php:71
+msgid "Are you sure you want to delete # {0}?"
+msgstr "هل أنت متأكد من أنك تريد حذف # %s؟"
+
+#: Admin/Articles/edit.php:23 Admin/Articles/view.php:11 Articles/edit.php:23
+#: Articles/view.php:11
+msgid "Edit Article"
+msgstr "تصحيح"
+
+#: Admin/Articles/index.php:8 Admin/Articles/view.php:14 Articles/index.php:8
+#: Articles/view.php:14
+msgid "New Article"
+msgstr "جهة اتصال جديدة"
+
+#: Admin/Articles/index.php:9 Articles/index.php:9 layout/default.php:44
+msgid "Articles"
+msgstr "مقالات"
+
+#: Admin/Articles/index.php:35 Admin/Articles/view.php:75
+#: Admin/ArticlesTags/index.php:25 Admin/Tags/index.php:29
+#: Admin/Tags/view.php:65 Admin/Users/index.php:31 Admin/Users/view.php:69
+#: Articles/index.php:35 Articles/view.php:75 ArticlesTags/index.php:25
+#: Tags/index.php:29 Tags/view.php:65 Users/index.php:31 Users/view.php:69
+msgid "View"
+msgstr "رأي"
+
+#: Admin/Articles/index.php:36 Admin/Articles/view.php:76
+#: Admin/ArticlesTags/index.php:26 Admin/Tags/index.php:30
+#: Admin/Tags/view.php:66 Admin/Users/index.php:32 Admin/Users/view.php:70
+#: Articles/index.php:36 Articles/view.php:76 ArticlesTags/index.php:26
+#: Tags/index.php:30 Tags/view.php:66 Users/index.php:32 Users/view.php:70
+msgid "Edit"
+msgstr "تصحيح"
+
+#: Admin/Articles/index.php:46 Admin/ArticlesTags/index.php:36
+#: Admin/Tags/index.php:40 Admin/Users/index.php:42 Articles/index.php:46
+#: ArticlesTags/index.php:36 Tags/index.php:40 Users/index.php:42
+msgid "first"
+msgstr "أول"
+
+#: Admin/Articles/index.php:47 Admin/ArticlesTags/index.php:37
+#: Admin/Tags/index.php:41 Admin/Users/index.php:43 Articles/index.php:47
+#: ArticlesTags/index.php:37 Tags/index.php:41 Users/index.php:43
+msgid "previous"
+msgstr "سابق"
+
+#: Admin/Articles/index.php:49 Admin/ArticlesTags/index.php:39
+#: Admin/Tags/index.php:43 Admin/Users/index.php:45 Articles/index.php:49
+#: ArticlesTags/index.php:39 Tags/index.php:43 Users/index.php:45
+msgid "next"
+msgstr "التالى"
+
+#: Admin/Articles/index.php:50 Admin/ArticlesTags/index.php:40
+#: Admin/Tags/index.php:44 Admin/Users/index.php:46 Articles/index.php:50
+#: ArticlesTags/index.php:40 Tags/index.php:44 Users/index.php:46
+msgid "last"
+msgstr "الاخير"
+
+#: Admin/Articles/index.php:52 Admin/ArticlesTags/index.php:42
+#: Admin/Tags/index.php:46 Admin/Users/index.php:48 Articles/index.php:52
+#: ArticlesTags/index.php:42 Tags/index.php:46 Users/index.php:48
+msgid ""
+"Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} "
+"total"
+msgstr ""
+"صفحة {{page}} من {{pages}} ، تعرض {{current}} سجل (سجلات) من إجمالي {{count}}"
+
+#: Admin/Articles/view.php:12 Articles/view.php:12
+msgid "Delete Article"
+msgstr "حذف"
+
+#: Admin/Articles/view.php:22 Articles/view.php:22
+msgid "User"
+msgstr "المستعمل"
+
+#: Admin/Articles/view.php:26 Admin/Articles/view.php:63 Admin/Tags/view.php:22
+#: Admin/Tags/view.php:46 Admin/Users/view.php:50 Articles/view.php:26
+#: Articles/view.php:63 Tags/view.php:22 Tags/view.php:46 Users/view.php:50
+msgid "Title"
+msgstr "عنوان"
+
+#: Admin/Articles/view.php:30 Admin/Tags/view.php:47 Admin/Users/view.php:51
+#: Articles/view.php:30 Tags/view.php:47 Users/view.php:51
+msgid "Slug"
+msgstr "سبيكة"
+
+#: Admin/Articles/view.php:34 Admin/Articles/view.php:62 Admin/Tags/view.php:26
+#: Admin/Tags/view.php:44 Admin/Users/view.php:30 Admin/Users/view.php:48
+#: Articles/view.php:34 Articles/view.php:62 Tags/view.php:26 Tags/view.php:44
+#: Users/view.php:30 Users/view.php:48
+msgid "Id"
+msgstr "مُعرف"
+
+#: Admin/Articles/view.php:38 Admin/Articles/view.php:64 Admin/Tags/view.php:30
+#: Admin/Tags/view.php:50 Admin/Users/view.php:34 Admin/Users/view.php:54
+#: Articles/view.php:38 Articles/view.php:64 Tags/view.php:30 Tags/view.php:50
+#: Users/view.php:34 Users/view.php:54
+msgid "Created"
+msgstr "تم إنشاؤه"
+
+#: Admin/Articles/view.php:42 Admin/Articles/view.php:65 Admin/Tags/view.php:34
+#: Admin/Tags/view.php:51 Admin/Users/view.php:38 Admin/Users/view.php:55
+#: Articles/view.php:42 Articles/view.php:65 Tags/view.php:34 Tags/view.php:51
+#: Users/view.php:38 Users/view.php:55
+msgid "Modified"
+msgstr "تم تعديله"
+
+#: Admin/Articles/view.php:46 Admin/Tags/view.php:49 Admin/Users/view.php:53
+#: Articles/view.php:46 Tags/view.php:49 Users/view.php:53
+msgid "Published"
+msgstr "نشرت"
+
+#: Admin/Articles/view.php:47 Articles/view.php:47
+msgid "Yes"
+msgstr "نعم، يمكنك ذلك من خلال حاسوبك او هاتفك المحمول"
+
+#: Admin/Articles/view.php:47 Articles/view.php:47
+msgid "No"
+msgstr "لا"
+
+#: Admin/Articles/view.php:51 Admin/Tags/view.php:48 Admin/Users/view.php:52
+#: Articles/view.php:51 Tags/view.php:48 Users/view.php:52
+msgid "Body"
+msgstr "الجسم"
+
+#: Admin/Articles/view.php:57 Articles/view.php:57
+msgid "Related Tags"
+msgstr "علامات المحفظة ذات الصلة"
+
+#: Admin/ArticlesTags/add.php:11 Admin/ArticlesTags/edit.php:16
+#: Admin/ArticlesTags/view.php:13 ArticlesTags/add.php:11
+#: ArticlesTags/edit.php:16 ArticlesTags/view.php:13
+msgid "List Articles Tags"
+msgstr "قائمة علامات المحفظة"
+
+#: Admin/ArticlesTags/add.php:18 ArticlesTags/add.php:18
+msgid "Add Articles Tag"
+msgstr "إضافة علامة محفظة"
+
+#: Admin/ArticlesTags/edit.php:23 Admin/ArticlesTags/view.php:11
+#: ArticlesTags/edit.php:23 ArticlesTags/view.php:11
+msgid "Edit Articles Tag"
+msgstr "تحرير علامة المحفظة"
+
+#: Admin/ArticlesTags/index.php:8 Admin/ArticlesTags/view.php:14
+#: ArticlesTags/index.php:8 ArticlesTags/view.php:14
+msgid "New Articles Tag"
+msgstr "علامة محفظة جديدة"
+
+#: Admin/ArticlesTags/index.php:9 ArticlesTags/index.php:9
+msgid "Articles Tags"
+msgstr "العلامات"
+
+#: Admin/ArticlesTags/view.php:12 ArticlesTags/view.php:12
+msgid "Delete Articles Tag"
+msgstr "حذف علامة المحفظة"
+
+#: Admin/ArticlesTags/view.php:22 ArticlesTags/view.php:22
+msgid "Article"
+msgstr "مقالة"
+
+#: Admin/ArticlesTags/view.php:26 ArticlesTags/view.php:26
+msgid "Tag"
+msgstr "بطاقة شعار"
+
+#: Admin/Tags/add.php:11 Admin/Tags/edit.php:16 Admin/Tags/view.php:13
+#: Tags/add.php:11 Tags/edit.php:16 Tags/view.php:13
+msgid "List Tags"
+msgstr "قائمة العلامات"
+
+#: Admin/Tags/add.php:18 Tags/add.php:18
+msgid "Add Tag"
+msgstr "إضافة علامة"
+
+#: Admin/Tags/edit.php:23 Admin/Tags/view.php:11 Tags/edit.php:23
+#: Tags/view.php:11
+msgid "Edit Tag"
+msgstr "تحرير العلامة"
+
+#: Admin/Tags/index.php:8 Admin/Tags/view.php:14 Tags/index.php:8
+#: Tags/view.php:14
+msgid "New Tag"
+msgstr "علامة جديدة"
+
+#: Admin/Tags/index.php:9 Tags/index.php:9 layout/default.php:45
+msgid "Tags"
+msgstr "العلامات"
+
+#: Admin/Tags/view.php:12 Tags/view.php:12
+msgid "Delete Tag"
+msgstr "حذف العلامة"
+
+#: Admin/Tags/view.php:39 Admin/Users/view.php:43 Tags/view.php:39
+#: Users/view.php:43
+msgid "Related Articles"
+msgstr "السجلات ذات الصلة"
+
+#: Admin/Tags/view.php:45 Admin/Users/view.php:49 Tags/view.php:45
+#: Users/view.php:49
+msgid "User Id"
+msgstr "مُعرف المستخدم"
+
+#: Admin/Users/add.php:11 Admin/Users/edit.php:16 Admin/Users/view.php:13
+#: Users/add.php:11 Users/edit.php:16 Users/view.php:13
+msgid "List Users"
+msgstr "قائمة المستخدمين"
+
+#: Admin/Users/add.php:18 Users/add.php:18
+msgid "Add User"
+msgstr "إضافة مستخدم"
+
+#: Admin/Users/edit.php:23 Admin/Users/view.php:11 Users/edit.php:23
+#: Users/view.php:11
+msgid "Edit User"
+msgstr "تعديل المستخدم"
+
+#: Admin/Users/index.php:8 Admin/Users/view.php:14 Users/index.php:8
+#: Users/view.php:14
+msgid "New User"
+msgstr "مستخدم جديد"
+
+#: Admin/Users/index.php:9 Users/index.php:9 layout/default.php:47
+msgid "Users"
+msgstr "المستخدمين"
+
+#: Admin/Users/view.php:12 Users/view.php:12
+msgid "Delete User"
+msgstr "مسح المستخدم"
+
+#: Admin/Users/view.php:22 Users/view.php:22
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: Admin/Users/view.php:26 Users/view.php:26
+msgid "Password"
+msgstr "كلمة المرور"
+
+#: layout/default.php:46
+msgid "Article Tags"
+msgstr "العلامات"
+
+#: layout/error.php:38
+msgid "Back"
+msgstr "عد"

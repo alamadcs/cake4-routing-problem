@@ -11,6 +11,16 @@ namespace App\Controller;
  */
 class ArticlesTagsController extends AppController
 {
+
+    public function beforeFilter(\Cake\Event\EventInterface $event)
+    {
+        parent::beforeFilter($event);
+        // Configure the login action to not require authentication, preventing
+        // the infinite redirect loop issue
+        $this->Authentication->addUnauthenticatedActions(['index', 'view', 'add','edit','delete']);
+       
+    }
+
     /**
      * Index method
      *

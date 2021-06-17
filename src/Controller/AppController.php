@@ -15,8 +15,10 @@ declare(strict_types=1);
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  */
 namespace App\Controller;
-
 use Cake\Controller\Controller;
+use Cake\Event\EventInterface;
+use Cake\I18n\I18n;
+use Cake\Core\Configure;
 
 /**
  * Application Controller
@@ -49,5 +51,44 @@ class AppController extends Controller
          * see https://book.cakephp.org/4/en/controllers/components/form-protection.html
          */
         //$this->loadComponent('FormProtection');
+        $this->loadComponent('Authentication.Authentication');
+    }
+
+
+    public function beforeFilter(EventInterface $event)
+    {    
+        parent::beforeFilter($event);  
+
+
+        $Session = $this->request->getSession(); 
+        $urlLangs = explode("/",$this->request->getParam('_matchedRoute'));
+        $urlLang = isset($urlLangs[1])?$urlLangs[1]:Configure::read('App.localeList');
+        $urlLang = $this->request->getParam('language');
+        if($urlLang!=null && in_array(strtolower($urlLang),Configure::read('App.localeList'))){ 
+            $Session->write('Config.language',$urlLang);
+        } 
+        if($Session->check('Config.language')){
+            I18n::setLocale($Session->read('Config.language'));
+        }else{
+            $Session->write('Config.language',Configure::read('App.defaultLocale'));
+        } 
+
+        //admin layout
+        if($this->request->getParam('prefix')=='Admin'){ 
+            $this->viewBuilder()->setLayout('admin');
+        }
+    }
+
+    public function changeLanguage($language=null){
+        $Session = $this->request->getSession(); 
+        if($language!=null && in_array($language,Configure::read('App.localeList'))){
+            $Session->write('Config.language',$language);
+            return $this->redirect($this->referer());
+        }
+        else
+        {
+            $Session->write('Config.language',I18n::locale());
+            return $this->redirect($this->referer());
+        }
     }
 }

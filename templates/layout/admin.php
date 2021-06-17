@@ -31,31 +31,36 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake']) ?>
     <style>
-     
-    nav a.lang-links{
+    body.admin nav{
+        background:#000;
+    }
+    body.admin nav a{
+        Color:#FFF;
+    }
+    body.admin nav a.lang-links{
         background:yellow;
         color:#333;
     }
-
     
     </style>
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
-<body>
+<body class='admin'>
     <nav class="top-nav">
         <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Public</span>Site</a>
+            <a href="<?= $this->Url->build('/') ?>">Admin Section</a>
         </div>
         <div class="top-nav-links"> 
-            <?php echo $this->Html->link(__('Goto Admin'),['controller'=>'Articles','prefix'=>'Admin'],['class'=>'lang-links']); ?>
+            <?php echo $this->Html->link(__('Goto Public Site'),['controller'=>'Articles','prefix'=>false],['class'=>'lang-links']); ?>
             <?php echo $this->Html->link(__('Articles'),['controller'=>'Articles']); ?>
             <?php echo $this->Html->link(__('Articles Tags'),['controller'=>'ArticlesTags']); ?>
             <?php echo $this->Html->link(__('Tags'),['controller'=>'Tags']); ?>
             <?php echo $this->Html->link(__('Users'),['controller'=>'Users']); ?>
-            <?php echo $this->Html->link(__('EN'),['controller'=>'App','action'=>'changeLanguage','en'],['class'=>'lang-links']); ?>
-            <?php echo $this->Html->link(__('AR'),['controller'=>'App','action'=>'changeLanguage','ar'],['class'=>'lang-links']); ?> 
+            <?php echo $this->Html->link(__('Logout'),['controller'=>'Users','action'=>'logout','prefix'=>false]); ?>
+            <?php echo $this->Html->link(__('EN'),['controller'=>'App','action'=>'changeLanguage','en','prefix'=>false],['class'=>'lang-links']); ?>
+            <?php echo $this->Html->link(__('AR'),['controller'=>'App','action'=>'changeLanguage','ar','prefix'=>false],['class'=>'lang-links']); ?> 
         </div>
     </nav>
     <main class="main">
