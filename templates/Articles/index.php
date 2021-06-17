@@ -4,6 +4,79 @@
  * @var \App\Model\Entity\Article[]|\Cake\Collection\CollectionInterface $articles
  */
 ?>
+<style>
+.lng{
+    background:green;
+    color:#FFF;
+}
+.admn{
+    background:yellow;
+    color:#000;
+}
+</style>
+<div class="content">
+    <h3>Description of problem</h3>
+    <p>You can navigate to different pages using to navbar, can change language</p>
+    <p>This is basic project followed CMS Tutorial at cakephp4.x website</p>
+    <p>It also has Admin prefix/section, and Authentication plugin</p>
+    <p>Also internationalization implemented following cakephp4.x documentation</p>
+    <p>Current Active language is being saved in Session, while nothing in URL</p>
+    <p>Till here all works as expected</p>             
+    <p>I want to the language parameter to be appeared in url, as below</p>
+    <table>
+        <tr>
+                    <th>URL</th>
+                    <th>Description</th>
+        </tr>
+        <tr>
+                <td>www.domain.com</td>
+                <td>Should be redirected to default language parameter, www.domain.com/<span class="lng">en<span></td>
+        </tr>
+        <tr>
+                <td>www.domain.com/<span class="lng">en<span></td>
+                <td>www.domain.com/<span class="lng">en<span></td>
+        </tr>
+        <tr>
+                <td>www.domain.com/<span class="lng">ar<span></td>
+                <td>www.domain.com/<span class="lng">ar<span></td>
+        </tr>
+        <tr>
+                <td>www.domain.com/<span class="lng">en<span>/*</td>
+                <td>www.domain.com/<span class="lng">en<span>/*</td>
+        </tr>
+        <tr>
+                <td>www.domain.com/<span class="lng">ar<span>/*</td>
+                <td>www.domain.com/<span class="lng">ar<span>/*</td>
+        </tr>
+        <tr>
+                    <td colspan="2"><b>I am facing issue to set routing for admin prefix INSIDE language parameter as below</b></td>
+        </tr>
+        
+        <tr style="color:red;">
+                <td>www.domain.com/<span class="admn">admin<span></td>
+                <td>Should be redirected to default language parameter, www.domain.com/<span class="lng">en<span>/<span class="admn">admin<span></td>
+        </tr>
+        <tr style="color:red;">
+                <td>www.domain.com/<span class="lng">en<span>/<span class="admn">admin<span></td>
+                <td>www.domain.com/<span class="lng">en<span>/<span class="admn">admin<span></td>
+        </tr>
+        <tr style="color:red;">
+                <td>www.domain.com/<span class="lng">ar<span>/<span class="admn">admin<span></td>
+                <td>www.domain.com/<span class="lng">ar<span>/<span class="admn">admin<span></td>
+        </tr>
+        <tr style="color:red;">
+                <td>www.domain.com/<span class="lng">en<span>/<span class="admn">admin<span>/*</td>
+                <td>www.domain.com/<span class="lng">en<span>/<span class="admn">admin<span>/*</td>
+        </tr>
+        <tr style="color:red;">
+                <td>www.domain.com/<span class="lng">ar<span>/<span class="admn">admin<span>/*</td>
+                <td>www.domain.com/<span class="lng">ar<span>/<span class="admn">admin<span>/*</td>
+        </tr>
+        
+    </table>
+</div>
+<br>
+
 <div class="articles index content">
     <?= $this->Html->link(__('New Article'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Articles') ?></h3>
@@ -52,3 +125,4 @@
         <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
 </div>
+<br>

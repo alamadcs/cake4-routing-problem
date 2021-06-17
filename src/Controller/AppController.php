@@ -57,26 +57,23 @@ class AppController extends Controller
 
     public function beforeFilter(EventInterface $event)
     {    
-        parent::beforeFilter($event);  
+        parent::beforeFilter($event);   
+        $Session = $this->request->getSession();   
+        // $urlLang = $this->request->getParam('language');
+        // if($urlLang!=null && in_array(strtolower($urlLang),Configure::read('App.localeList'))){ 
+        //     $Session->write('Config.language',$urlLang);
+        // } 
+        // if($Session->check('Config.language')){
+        //     I18n::setLocale($Session->read('Config.language'));
+        // }else{
+        //     $Session->write('Config.language',Configure::read('App.defaultLocale'));
+        // } 
 
-
-        $Session = $this->request->getSession(); 
-        $urlLangs = explode("/",$this->request->getParam('_matchedRoute'));
-        $urlLang = isset($urlLangs[1])?$urlLangs[1]:Configure::read('App.localeList');
-        $urlLang = $this->request->getParam('language');
-        if($urlLang!=null && in_array(strtolower($urlLang),Configure::read('App.localeList'))){ 
-            $Session->write('Config.language',$urlLang);
-        } 
-        if($Session->check('Config.language')){
-            I18n::setLocale($Session->read('Config.language'));
-        }else{
-            $Session->write('Config.language',Configure::read('App.defaultLocale'));
-        } 
-
-        //admin layout
+        //admin layout for admin prefix starts here
         if($this->request->getParam('prefix')=='Admin'){ 
             $this->viewBuilder()->setLayout('admin');
         }
+        //admin layout for admin prefix ends here
     }
 
     public function changeLanguage($language=null){
