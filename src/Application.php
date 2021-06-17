@@ -36,6 +36,8 @@ use Authentication\Middleware\AuthenticationMiddleware;
 use Cake\Routing\Router;
 use Psr\Http\Message\ServerRequestInterface;
 
+use App\Middleware\DefaultlngMiddleware;
+
 /**
  * Application setup class.
  *
@@ -83,6 +85,7 @@ class Application extends BaseApplication
      */
     public function middleware(MiddlewareQueue $middlewareQueue): MiddlewareQueue
     {
+         
         $middlewareQueue
             // Catch any exceptions in the lower layers,
             // and make an error page/response
@@ -100,20 +103,22 @@ class Application extends BaseApplication
             // using it's second constructor argument:
             // `new RoutingMiddleware($this, '_cake_routes_')`
             ->add(new RoutingMiddleware($this))
-
+            //->add(new DefaultlngMiddleware($this))
             ->add(new AuthenticationMiddleware($this))
-
+            
             // Parse various types of encoded request bodies so that they are
             // available as array through $request->getData()
             // https://book.cakephp.org/4/en/controllers/middleware.html#body-parser-middleware
             ->add(new BodyParserMiddleware())
 
+            
+            
+
             // Cross Site Request Forgery (CSRF) Protection Middleware
             // https://book.cakephp.org/4/en/controllers/middleware.html#cross-site-request-forgery-csrf-middleware
             ->add(new CsrfProtectionMiddleware([
                 'httponly' => true,
-            ]));
-
+            ])); 
         return $middlewareQueue;
     }
 
@@ -122,7 +127,7 @@ class Application extends BaseApplication
     public function getAuthenticationService(ServerRequestInterface $request): AuthenticationServiceInterface
     {
         $authenticationService = new AuthenticationService([
-            'unauthenticatedRedirect' => Router::url('/users/login'),
+            'unauthenticatedRedirect' => Router::url('/en/users/login'),
             'queryParam' => 'redirect',
         ]);
 
@@ -142,7 +147,7 @@ class Application extends BaseApplication
                 'username' => 'email',
                 'password' => 'password',
             ],
-            'loginUrl' => Router::url('/users/login'),
+            'loginUrl' => Router::url('/en/users/login'),
         ]);
 
         return $authenticationService;

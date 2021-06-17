@@ -59,8 +59,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <?php echo $this->Html->link(__('Tags'),['controller'=>'Tags']); ?>
             <?php echo $this->Html->link(__('Users'),['controller'=>'Users']); ?>
             <?php echo $this->Html->link(__('Logout'),['controller'=>'Users','action'=>'logout','prefix'=>false]); ?>
-            <?php echo $this->Html->link(__('EN'),['controller'=>'App','action'=>'changeLanguage','en','prefix'=>false],['class'=>'lang-links']); ?>
-            <?php echo $this->Html->link(__('AR'),['controller'=>'App','action'=>'changeLanguage','ar','prefix'=>false],['class'=>'lang-links']); ?> 
+            <?php echo $this->Html->link(__('EN'),['language'=>'en'],['class'=>'lang-links']); ?>
+            <?php echo $this->Html->link(__('AR'),['language'=>'ar'],['class'=>'lang-links']); ?> 
         </div>
     </nav>
     <main class="main">

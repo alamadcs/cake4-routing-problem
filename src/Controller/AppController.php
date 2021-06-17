@@ -57,17 +57,18 @@ class AppController extends Controller
 
     public function beforeFilter(EventInterface $event)
     {    
-        parent::beforeFilter($event);   
+        parent::beforeFilter($event); 
+        
         $Session = $this->request->getSession();   
-        // $urlLang = $this->request->getParam('language');
-        // if($urlLang!=null && in_array(strtolower($urlLang),Configure::read('App.localeList'))){ 
-        //     $Session->write('Config.language',$urlLang);
-        // } 
-        // if($Session->check('Config.language')){
-        //     I18n::setLocale($Session->read('Config.language'));
-        // }else{
-        //     $Session->write('Config.language',Configure::read('App.defaultLocale'));
-        // } 
+        $urlLang = $this->request->getParam('language');
+        if($urlLang!=null && in_array(strtolower($urlLang),Configure::read('App.localeList'))){ 
+            $Session->write('Config.language',$urlLang);
+        } 
+        if($Session->check('Config.language')){
+            I18n::setLocale($Session->read('Config.language'));
+        }else{
+            $Session->write('Config.language',Configure::read('App.defaultLocale'));
+        } 
 
         //admin layout for admin prefix starts here
         if($this->request->getParam('prefix')=='Admin'){ 
@@ -80,12 +81,22 @@ class AppController extends Controller
         $Session = $this->request->getSession(); 
         if($language!=null && in_array($language,Configure::read('App.localeList'))){
             $Session->write('Config.language',$language);
-            return $this->redirect($this->referer());
+            $isValidLang = substr($this->referer(),1,2);
+            if(in_array($isValidLang,['en','ar']) ){
+                $url = substr($this->referer(),3);
+                $url = '/'.$language. $url;
+            } 
+            return $this->redirect( $url);
         }
         else
-        {
+        { 
             $Session->write('Config.language',I18n::locale());
-            return $this->redirect($this->referer());
+            $isValidLang = substr($this->referer(),1,2);
+            if(in_array($isValidLang,['en','ar']) ){
+                $url = substr($this->referer(),3);
+                $url = '/'.$language. $url;
+            } 
+            return $this->redirect( $url);
         }
     }
 }

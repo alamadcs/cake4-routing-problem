@@ -2,6 +2,8 @@
 declare(strict_types=1);
 
 namespace App\Controller;
+use Cake\Routing\Router;
+ 
 
 /**
  * Articles Controller
@@ -19,6 +21,8 @@ class ArticlesController extends AppController
         $this->Authentication->addUnauthenticatedActions(['index', 'view', 'add','edit','delete']);
          
     }
+
+    
     /**
      * Index method
      *
@@ -26,6 +30,13 @@ class ArticlesController extends AppController
      */
     public function index()
     {
+        // debug(Router::url([
+        //     'controller'=>'Tags',
+        //     'action'=>'index'
+        // ]));
+        // debug($this->request);
+        // exit;
+     
         $this->paginate = [
             'contain' => ['Users'],
         ];
